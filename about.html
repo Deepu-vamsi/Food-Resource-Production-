@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Food Resource Production</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library for bar graphs -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="methods.html">Methods</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <h2>Food Resource Production Project Overview</h2>
+        <p>Our project focuses on sustainable practices in food production, which aim to balance the needs of the growing population while preserving the environment. Our approach includes implementing innovative technologies, providing training, and advocating for policy changes that promote food security and sustainability.</p>
+
+        <!-- Bar Graph Section -->
+        <h2>Impact of Sustainable Practices on Crop Yield</h2>
+        <canvas id="cropYieldChart" width="600" height="400"></canvas>
+        <p>This bar graph illustrates the impact of sustainable farming practices on crop yields across different regions. Sustainable practices such as organic farming, reduced pesticide use, and improved soil health contribute to yield increases, ensuring a steady food supply.</p>
+
+        <script>
+            const cropYieldChart = document.getElementById('cropYieldChart').getContext('2d');
+            new Chart(cropYieldChart, {
+                type: 'bar',
+                data: {
+                    labels: ['North America', 'Europe', 'Asia', 'Africa', 'South America'],
+                    datasets: [{
+                        label: 'Yield Increase (%)',
+                        data: [15, 20, 25, 10, 18],
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <h2>Reduction in Water Usage through Sustainable Techniques</h2>
+        <canvas id="waterUsageChart" width="600" height="400"></canvas>
+        <p>This bar graph demonstrates the reduction in water usage achieved by implementing sustainable agricultural techniques across various farming methods. Techniques like drip irrigation, crop rotation, and vertical farming have significantly reduced water demand.</p>
+
+        <script>
+            const waterUsageChart = document.getElementById('waterUsageChart').getContext('2d');
+            new Chart(waterUsageChart, {
+                type: 'bar',
+                data: {
+                    labels: ['Traditional', 'Organic', 'Vertical Farming', 'Hydroponics', 'Aquaponics'],
+                    datasets: [{
+                        label: 'Water Usage Reduction (%)',
+                        data: [0, 25, 60, 70, 65],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <!-- Table Section 1 -->
+        <h2>Comparison of Food Production Methods</h2>
+        <table border="1" cellpadding="10" cellspacing="0" style="width:100%; margin-top: 20px;">
+            <tr>
+                <th>Method</th>
+                <th>Yield per Acre (kg)</th>
+                <th>Water Usage (L per kg)</th>
+                <th>Environmental Impact</th>
+            </tr>
+            <tr>
+                <td>Traditional Farming</td>
+                <td>4,000</td>
+                <td>2,500</td>
+                <td>High</td>
+            </tr>
+            <tr>
+                <td>Organic Farming</td>
+                <td>3,500</td>
+                <td>1,800</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>Vertical Farming</td>
+                <td>5,000</td>
+                <td>500</td>
+                <td>Low</td>
+            </tr>
+            <tr>
+                <td>Hydroponics</td>
+                <td>6,000</td>
+                <td>300</td>
+                <td>Very Low</td>
+            </tr>
+        </table>
+        <p>This table compares various food production methods in terms of yield, water usage, and environmental impact. Sustainable methods like hydroponics and vertical farming show high yield potential with minimal environmental impact.</p>
+
+        <!-- Table Section 2 -->
+        <h2>Global Adoption of Sustainable Practices</h2>
+        <table border="1" cellpadding="10" cellspacing="0" style="width:100%; margin-top: 20px;">
+            <tr>
+                <th>Region</th>
+                <th>% of Farms Using Sustainable Practices</th>
+                <th>Primary Practice Adopted</th>
+            </tr>
+            <tr>
+                <td>North America</td>
+                <td>55%</td>
+                <td>Organic Farming</td>
+            </tr>
+            <tr>
+                <td>Europe</td>
+                <td>70%</td>
+                <td>Agroforestry</td>
+            </tr>
+            <tr>
+                <td>Asia</td>
+                <td>30%</td>
+                <td>Crop Rotation</td>
+            </tr>
+            <tr>
+                <td>Africa</td>
+                <td>25%</td>
+                <td>Agroecology</td>
+            </tr>
+        </table>
+        <p>This table highlights the adoption rate of sustainable practices across different regions. Europe leads with a 70% adoption rate, primarily through agroforestry, while Asia and Africa are gradually increasing their adoption of practices like crop rotation and agroecology.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Food Resource Production
+    </footer>
+
+</body>
+</html>
